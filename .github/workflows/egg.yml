@@ -10,10 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: 查询路径
-      run: pwd
-    - name: 查询npm版本
-      run: npm --version
     - name: 读取仓库内容
       uses: actions/checkout@v4
     - name: 安装依赖，项目打包
