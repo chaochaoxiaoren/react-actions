@@ -18,6 +18,9 @@ jobs:
         npm install
         npm run build
 
+    - name: 查看打包后的文件列表
+      run: ls
+
     - name: 部署github pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
