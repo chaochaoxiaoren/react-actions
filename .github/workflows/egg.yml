@@ -1,11 +1,20 @@
+name: egg项目打包
+
 on: push
 
 jobs:
   npm-build:
+    name: build构建工作
     runs-on: ubuntu-latest
+
     steps:
-    - run: pwd
-    - run: npm --version
-    - uses: actions/checkout@v4
-    - run: npm install
-    - run: npm run ci
+    - name: 查询路径
+      run: pwd
+    - name: 查询npm版本
+      run: npm --version
+    - name: 读取仓库内容
+      uses: actions/checkout@v4
+    - name: 安装依赖
+      run: npm install
+    - name: 项目打包
+      run: npm run ci
