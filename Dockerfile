@@ -9,4 +9,4 @@ COPY package-lock.json/ /react-actions/package-lock.json
 
 RUN npm install
 
-CMD ["npm", "dev"]
+CMD ["npm", "run", "dev"]
