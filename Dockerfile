@@ -2,11 +2,12 @@ FROM node:18-alpine
 
 WORKDIR /react-actions
 
-COPY public/ /react-actions/public
-COPY src/ /react-actions/src
-COPY package.json/ /react-actions/package.json
-COPY package-lock.json/ /react-actions/package-lock.json
+COPY package*.json ./
 
 RUN npm install
+
+COPY . .
+
+EXPOSE 5173
 
 CMD ["npm", "run", "dev"]
